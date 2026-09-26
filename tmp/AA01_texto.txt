@@ -1,0 +1,618 @@
+=== PAGINA 1 ===
+Presentació Assignatura Algorísmica Avançada | Enginyeria Informàtica 
+Santi Seguí | 2026-2027
+=== PAGINA 2 ===
+Santi Seguí   Email: santi.segui@ub.edu 
+Professor Agregat al departament de Matemàtiques i Informàtica  
+de la Universitat de Barcelona.  
+Doctorat amb Visió per Computador i Machine Learning 
+Graduat amb Informàtica 
+
+=== PAGINA 3 ===
+Oriol PujolManuel Hernández
+oriol_pujol@ub.edumanuel.hernandez@ub.edu
+Sergio Escalera
+sescalera@ub.edu
+Pablo Martinez
+pablo.martinez@ub.edu 
+
+=== PAGINA 4 ===
+Algorísmica Avançada
+Algorísmica
+Estructura de 
+Dades
+Algorísmica 
+Avançada
+=== PAGINA 5 ===
+
+=== PAGINA 6 ===
+Quina és la complexitat del següent algoritme:
+O (2c +4)
+O(c) O(2c + 3)
+O (2c)
+* considerem C com a la longitud de l’array
+=== PAGINA 7 ===
+Complexitat d’un algoritme
+•Abans d'estudiar algorismes concrets necessitem una manera de mesurar com de bo és un algorisme sense 
+dependre de l'ordinador on s'executa. Aquesta és la idea de la complexitat: com creix el temps (o la memòria) a 
+mesura que creix la mida de l'entrada. 
+•Per què no cronometrar i prou? 
+•Mesurar segons en una màquina concreta no serveix per comparar algorismes: depèn del processador, del 
+llenguatge, de la càrrega del sistema... En canvi, comptar quantes operacions bàsiques fa un algorisme en 
+funció de la mida de l'entrada N és independent de la màquina i ens diu com es comportarà quan les dades 
+creixin. 
+•La pregunta clau 
+•No ens importa tant si un algorisme triga 2 o 4 segons amb dades petites, sinó què passa quan N es fa gran: ¿el 
+temps es duplica, es multiplica per quatre, o explota? Això és el que captura la complexitat asimptòtica.
+=== PAGINA 8 ===
+Notació asimptòtica: O, Ω i Θ
+•Descrivim el creixement d'una funció T(N) (operacions en funció de N) ignorant constants i termes de 
+menor ordre: 
+•O (cota superior): T(N) = O(f(N)) vol dir que T creix com a molt tan ràpid com f. És la garantia 
+del pitjor cas i la notació més usada. 
+•Ω (cota inferior): T(N) = Ω(f(N)) vol dir que creix com a mínim com f. 
+•Θ (cota ajustada): T(N) = Θ(f(N)) vol dir totes dues coses alhora: creix exactament com f (llevat de 
+constants). 
+•Per això escrivim O(2n + 3) = O(n): descartem les constants (el «2» i el «+3») perquè no canvien la 
+forma del creixement.
+=== PAGINA 9 ===
+Notació Asimptòtica
+Quin és el cost d’aquest algoritme?
+
+=== PAGINA 10 ===
+Notació Asimptòtica
+Quin és el cost d’aquest algoritme?
+* considerem C com a la longitud de l’array
+
+=== PAGINA 11 ===
+Quines respostes són correctes?
+No podem saber si un algoritme amb 
+complexitat O(n!) és millor que un amb 
+complexitat O(2^n) sense saber el valor 
+de n .
+O(n) < O(n log n)  < O (n^2) < O(n!)
+O(n) < O(2n) O(2^n) < O(n^2)
+=== PAGINA 12 ===
+
+=== PAGINA 13 ===
+🔍 Exemple: Problema de desxifrar contrasenyes
+•Suposem que una contrasenya està formada per 8 lletres minúscules (a–z). Un atacant intenta endevinar-la amb força bruta. 
+•Quantes possibles combinacions hi ha?  
+•  
+•Si l’atacant pot provar un milió de contrasenyes per segon, quant trigarà? 
+•  
+•
+🧠 Per què importa la complexitat? 
+•Per a una contrasenya de 4 caràcters es pot trencar en segons 
+•Per a una contrasenya de 12 caràcters necessitem més de 3.000 anys. 
+•Això mostra un creixement exponencial.
+268≈2∗1011
+208
+106proves/s
+≈208.000 segons≈58 hores
+=== PAGINA 14 ===
+Podem suggerir “amics” al TOM?.
+Recomanarem aquells que estiguin distància 2 (amics d’amics). Quin algoritme podem utilitzar?
+BFS
+Tom
+Alice
+Peter Elisa
+Diana
+Carl
+Bob
+DFS
+=== PAGINA 15 ===
+Què és un graf?
+=== PAGINA 16 ===
+Què és un graf?
+•El graf és una estructura de dades NO LINEAL
+Array
+Linked List
+Stack
+Queue
+Estructures de dades lineals
+=== PAGINA 17 ===
+Què és un graf?
+Quina estructura de dades NO LINEAL coneixeu?
+•El graf és una estructura de dades NO LINEAL
+Arestes
+Nodes o Vèrtexs
+=== PAGINA 18 ===
+Què és un graf?
+•El graf és una estructura de dades NO LINEAL
+
+=== PAGINA 19 ===
+Què és un graf?
+•Un graf és un conjunt  de vèrtexs o nodes i un conjunt  de d’arestes o arcs relacionats 
+entre aquests vèrtexs. Els grafs tenen una estructura topològica que ens permet establir 
+relacions espacials entre els vèrtexs que estem estudiant. 
+•Un graf és un conjunt ordenats  on: 
+• és el conjunt de vèrtex, i 
+• és un conjunt d’arestes que relacionen aquests vèrtexs
+V E
+G=(V,E)
+V
+E
+A B
+Graf no dirigit
+A B
+graf dirigit
+=== PAGINA 20 ===
+
+=== PAGINA 21 ===
+V={1,2,3,4,5,6}
+E={{1,2},{1,5},{2,3},{2,5},{3,4},{4,5},{4,6}}
+V={1,2,3,4,5,6}
+E={(1,2),(1,5),(2,3),(2,5),(3,4),(4,5),(4,6)}
+
+=== PAGINA 22 ===
+Graf simple
+•Tenim un bucle (o loop) si tenim un node connectat amb si mateix, i.e. tenim una aresta que 
+comença i acaba al mateix node. 
+•Múltiples arestes entre dos nodes 
+•Diem que el graf es simple si el graf és no dirigit, no té cap bucle i com a màxim una aresta 
+entre qualsevol parella de vèrtexs diferents.
+=== PAGINA 23 ===
+És això un graf simple?
+Text del títol
+
+=== PAGINA 24 ===
+Grafs amb pesos
+24
+=== PAGINA 25 ===
+Algoritmes sobre grafs
+•Pesos a les arestes 
+Exemple amb distàncies
+25
+=== PAGINA 26 ===
+Propietats dels grafs
+•El grau  d'un vèrtex és el nombre d'arestes que hi incideixen
+Un graf amb vèrtexs etiquetats segons el seu grau. El vèrtex aïllat s'etiqueta amb 0, ja 
+que no és adjacent a cap altre vèrtex.
+=== PAGINA 27 ===
+Què és el grau d’un node?
+Text del títol
+Graf no dirigit Graf dirigit
+Grau (degree) del node = 3
+Grau d’entrada (In degree) = 2
+Grau de sortida (Out degree) = 1
+El grau d’un node és el 
+nombre d'arestes incidents a 
+ell
+El grau d’entrada (indegree) és el 
+nombre d'arestes d’entrada i el 
+grau de sortida (outdegree) és el 
+nombre d’arestes de sortida
+=== PAGINA 28 ===
+Exemples
+=== PAGINA 29 ===
+Principalment treballarem amb grafs
+=== PAGINA 30 ===
+Xarxes socials
+Text del títol
+=== PAGINA 31 ===
+Social Networks
+Text del títol
+Tom
+Alice
+Peter Elisa
+Diana
+Carl
+Bob
+=== PAGINA 32 ===
+Social Networks
+Podem suggerir algun contacte al Tom?
+Tom
+Alice
+Peter Elisa
+Diana
+Carl
+Bob
+=== PAGINA 33 ===
+Navegació
+Optimització de rutes
+
+=== PAGINA 34 ===
+Mapes
+Visualitzacions y generació de rutes
+=== PAGINA 35 ===
+Com podem visitar tots els PDIs fent el menor número de quilòmetres?
+=== PAGINA 36 ===
+
+=== PAGINA 37 ===
+
+=== PAGINA 38 ===
+
+=== PAGINA 39 ===
+
+=== PAGINA 40 ===
+Hi ha un cicle que estrictament ens permet passar un cop per cada node?
+=== PAGINA 41 ===
+
+=== PAGINA 42 ===
+Jocs
+Estratègies basades en grafs
+
+=== PAGINA 43 ===
+Aplicacions amb grafs
+Graph Vertex Edge
+Network Communication telephone, computer ﬁber optic cable
+circuit gate, register, processor wire
+ﬁnancial stock, currency transactions
+transportation street intersection, airport highway, airway route
+game board position legal move
+social relationship person, actor friendship, movie cast
+molecule atom bond
+neural network neuron synapse
+=== PAGINA 44 ===
+Algunes preguntes interessants!
+•Camí (Path): Hi ha cap camí entre els nodes s i t? 
+•Camí més curt: Quin és el camí més curt entre els nodes s i t? 
+•Cicle: Hi ha cap cicle en el graf? 
+•Camí d’Euler: Hi ha camí que em permeti visitar cada node passant exactament un cop per cada aresta? 
+•Camí Hamiltonià: Hi ha un camí en el graf que passa exactament un cop per cada vèrtex? 
+•Connectivitat. Hi ha cap manera de connectar tots els nodes 
+•MST. Quina és la millor manera de connectar tots els nodes d’un graf? 
+•Bioconnectivitat. Hi ha cap node que la seva eliminació desconnecti el graf. 
+•Planaritat. Podeu dibuixar el gràf en el pla sense vores de creuament 
+Quins d’aquests problemes 
+són fàcils? difícil? intractable?
+=== PAGINA 45 ===
+Planificació 
+Organització
+=== PAGINA 46 ===
+Algorísmica Avançada
+Text del títol
+ Grafs 
+———————————————— 
+Què són els grafs?  
+Com es representen? 
+DFS /BFS/ Component Connexes 
+Com trobar els camins més curts entre dos nodes (Dijkstra/
+BellmanFord) 
+Problema Flux Màxim 
+Circuits i camins eulerians 
+Algorítmes “greedy” 
+———————————————— 
+Un algoritme “greedy” és un algoritme que, per resoldre un 
+problema d'optimització, fa una seqüència d'eleccions, prenent en 
+cada pas un òptim local,  amb l’esperança - no sempre complerta -  
+d’assolir una solució òptima global. L'algoritme voraç no torna mai 
+enrere per re-avaluar les eleccions ja preses. 
+Kruskal / Prim  
+Problema de la Motxilla/Viatger de Comerç
+Programació Dinàmica 
+———————————————— 
+Problemes d’optimització de tasques per tal d’arribar a una solució 
+òptima 
+Floyd Wharshall 
+ Problema de la Motxilla, Levenshtein 
+ Ponts de Hanoi 
+… 
+Enumeratius 
+———————————————— 
+Backtracking, Ramiﬁcació i Poda 
+Sudoku, 8-Reines, 
+ Problema de la Motxilla 
+… 
+… 
+=== PAGINA 47 ===
+Objectius del curs 
+•Anàlisi i disseny avançat d’algoritmes, tant des d’un punt de vista teòric com aplicat 
+Què esperem dels estudiants? 
+•Els estudiants han de participar de forma activa durant les classes de teoria (1.5 hores a la setmana). Durant les 
+hores presencials de pràctiques i problemes (1.5 i 1.5 hores cada setmana excepte les setmanes marcades com 
+NO classe) hauran de resoldre de forma individual una sèrie de problemes. Les hores no presencials de 
+l’assignatura (4 hores a la setmana) les han de dedicar a l’estudi de la teoria i a la preparació de les pràctiques. 
+Contactes: 
+Teoria Online 
+•Santi Seguí                                             Email: santi.segui@ub.edu 
+Sessions Problemes 
+• Manuel Andrés Hernández               Email: b.miquel@ub.edu 
+Laboratoris   
+• Santi Seguí                                            Email: santi.segui@ub.edu 
+• Sergio Escalera                                     Email: sescalera@ub.edu 
+• Pablo Martínez                                     Email: pablo.martinez@ub.edu 
+=== PAGINA 48 ===
+• Com seran les classes Teòriques? (1.5 hora la setmana) 
+•S’introdueixen els conceptes teòrics de l’assignatura. 
+• Com seran les classes  problemes? (1.5 hores a la setmana) 
+•Es realitzaran amb grups reduïts. Es farà un repàs de la teoria i exercicis associats a les sessions corresponents  
+•S’ha de portar portàtil sempre que es pugui! 
+•L’alumne ha d’haver treballat el contingut corresponent a la sessió. 
+• Com seran les classes de Laboratori? (1.5 hora a la setmana) 
+•S’espera que l’alumne treballi amb les diferents pràctiques de forma autònoma i asíncrona. 
+•Les pràctiques es realitzen amb parelles.
+=== PAGINA 49 ===
+
+=== PAGINA 50 ===
+Llenguatge de programació? 
+•Python 3
+Com s’organitza l’assignatura? 
+•L’assignatura s’imparteix en classes teòriques, problemes i pràctiques. L’assignatura es coordinarà 
+mitjançant el Campus Virtual. A través d’aquest entorn tindreu: anuncis, apunts, notes, fòrum, 
+calendari, enllaços a la bibliograﬁa, etc.  
+•https://campusvirtual2.ub.edu/ 
+IMPORTANT: TOTS els dubtes, qüestions, problemes, etc.. de caire no personal s’han de realitzar 
+mitjançant el Fòrum del Campus Virtual. 
+No es contestarà cap correu electrònic que no sigui una qüestió personal.
+=== PAGINA 51 ===
+Fòrum 
+Què puc preguntar? 
+•Qualsevol cosa referent a la assignatura! Dubtes, problemes amb codis, … 
+Puc compartir informació? 
+•Podeu compartir qualsevol cosa que vulgueu. Entre elles documents, vídeos, solucions a problemes, exàmens d’anys passats 
+solucionats, etc… És a dir, qualsevol cosa que creieu que pot ajudar a la resta d’alumnes. 
+Segur que puc compartir tot el que vulgui? 
+•No està permès compartir les vostres pràctiques/problemes avaluables, així com qualsevol solució a les pràctiques/problemes 
+avaluables de l’assignatura. 
+Puc contestar? 
+•Si!!! Una activa participació al fòrum es tindrà en compte de forma positiva (un 8.8 de l’assignatura és pot convertir amb un 9).
+IMPORTANT: TOTS els dubtes, qüestions, problemes, etc.. 
+de caire no personal, s’han de realitzar mitjançant el Fòrum 
+del Campus Virtual. 
+No es contestarà cap correu electrònic que no sigui una 
+qüestió personal.
+=== PAGINA 52 ===
+Com s’avaluarà l’assignatura? 
+•L’assignatura seguirà un esquema d’avaluació continuada, amb dos elements principals: exàmens presencials i lliurament de 
+pràctiques 
+Proves presencials: 
+•Setmana exàmens parcial  
+•Examen Parcial Teoria ( ) 
+•Examen Parcial Pràctiques ( ) 
+•Examen ﬁnal  
+•Examen Final Teoria ( ) 
+•Examen Final Pràctiques ( ) 
+•—> A l’examen ﬁnal es permet recuperar la part (EPT i/o EPP) de l’examen parcial en cas de suspens.  En cas de presentar-
+se, es renuncia a la nota del parcial. 
+•Als exàmens (teoria i pràctiques) NO ES POT portar apunts ni utilitzar Internet. 
+•NOTA: Les pràctiques i proves de pràctiques es faran amb “NOTEBOOK” 
+Lliurament de pràctiques: 
+•Lliurament de pràctiques: Cada un dels lliuraments de pràctiques serà avaluat pel professor amb una nota que pot anar de 0 a 
+10.  
+•Si l’estudiant no lliura les pràctiques dins del període assenyalat, obtindrà un 0.  
+•La nota ﬁnal ( ) de la part de pràctiques és la mitjana de tots els lliuraments.
+EPT
+EPP
+EFT
+EFP
+NLP
+=== PAGINA 53 ===
+•Nota Teoria (NT): Mitjana dels exàmens de teoria (  i ) 
+•Nota Proves Pràctiques (NPP) : Mitjana dels exàmens de pràctiques (  i ) 
+•Nota Lliuraments Pràctiques (NLP): Són proves presencials. La nota és la mitjana de totes elles. 
+•Per poder estimar la Nota ﬁnal de l’assignatura, l’estudiant ha de complir la condició següent:  
+•Nota ﬁnal =  
+• Nota Teoria (NT) +   Nota Proves Pràctiques (NPP) +  Nota Lliuraments Pràctiques (NLP) 
+•Per aprovar l’assignatura s’ha de complir que 
+•Nota ﬁnal  5;  
+•NT, NPP i NLP han ser iguals o superior a 4. 
+•En cas que Nota ﬁnal  3.5 l’estudiant té dret a reavaluació 
+NPTNFT
+NPPNFP
+35% 35% 30%
+≥
+≥
+=== PAGINA 54 ===
+Avaluació Única 
+•L’estudiant que es vulgui acollir a l’avaluació única ho ha de sol·licitar a la Secretaria de la 
+Facultat dins dels terminis establerts dins el curs acadèmic. 
+•L’avaluació única consisteix en un examen ﬁnal únic que consta d’una part teòrica (ET) i una 
+prova pràctica (PP) davant de l’ordinador. 
+•Per aprovar l’assignatura s’ha de complir que 
+•Nota ﬁnal  5;  
+•ET i PP han ser igual o superior a 4. 
+•En aquest cas, la nota s’avalua de la manera següent: 
+•Nota_Final = 0,5 * ET + 0,5 * PP 
+≥
+=== PAGINA 55 ===
+Reavaluació 
+•L’alumne té dret a la reavaluació sempre que la Nota Final obtinguda sigui com a mínim un 3.5. 
+•La reavaluació consta d’un examen ÚNIC de teoria (50%) i un examen pràctic (50%). 
+•No es conserva cap nota dels exàmens anteriors. 
+•En el cas de reavaluació, les notes de pràctiques no tenen cap pes per a la Nota Final. 
+=== PAGINA 56 ===
+Tutories 
+•Els professors de pràctiques us informaran dels seus horaris de tutories. 
+•És important enviar un correu al professor abans per concertar l’horari de la consulta. 
+=== PAGINA 57 ===
+Puc fer servir la IA (ChatGPT, Claude, Copilot) 
+•Sí, com a eina d’aprenentatge: per entendre conceptes, explorar idees, depurar i accelerar-te un cop entens què fas. 
+•Avaluem el teu criteri: dissenyar, saber per què i quan un algoritme funciona, validar-lo i triar la millor opció entre alternatives.  
+•No permès: lliurar pràctiques/problemes/examens avaluables resolts amb IA que no sapiguem explicar ni entendre. 
+•Als exàmens: sense Internet ni IA (sempre que el professor no digui el contrari) 
+•Regla pràctica: Si no pots explicar línia a línia el que has lliurat, el códi no es teu. 
+=== PAGINA 58 ===
+Teoria Problemes Pràctiques
+Setmana Dilluns	 Dimarts Dijous Dimarts Dijous
+14 set Intro + Grafs I  
+(Representació + DFS) Introducció Prac. Introductòria + Prac Graf
+21 set. Grafs II 
+(BFS, Components Connexes, Dijkstra)
+28 set. Grafs III 
+( Bellman Ford, Ordre topològic) Grafs I Prac Grafs
+5 oct. Grafs IV 
+(Ford Fulkensen, Min-Cut Max-Flow) Grafs II Prac Grafs
+12 oct. FESTIU Grafs III Entrega/Prova Prac Grafs
+19 oct. Greedy I 
+Minimum Spanning Tree, Kruskal, Union-Find
+Greedy I Prac Greedy
+26 oct. Greedy II 
+Prim, Graph Coloring, Hoffman Code
+Greedy II
+2 nov. Setmana Exàmens	 Setmana Exàmens	 Setmana Exàmens	
+9 nov. Programació Dinàmica I 
+Fibonacci, Floyd Warshall, Motxilla, Descens riu Programació Dinàmica I Entrega/Prova Greedy
+16 nov. Programació Dinàmica II 
+LIS, Levenshtein, Problema del Viatjant Comerç Programació Dinàmica II Prac Programació Dinàmica
+23 nov. Enumeratius I: Backtracking 
+Motxilla, Sudoku, Pintar Mapa Prac Enumeratius
+30 nov. Enumeratius II: Branch & Bound 
+Motxilla, Tasques, Puzzle Enumeratius I Prac Enumeratius
+7 des. FESTIU FESTIU
+14 des. Enumeratius III: Branch & Bound 
+TSP Enumeratius II Entrega/Prova PD & Enumeratius
+21 des. Dubtes
+=== PAGINA 59 ===
+Representació dels 
+grafs
+=== PAGINA 60 ===
+Representació dels grafs
+60
+5
+0
+3 4
+621
+5
+0
+3 4
+621
+5
+0
+3 4
+621
+86
+9
+5 7
+2
+2
+2
+3
+Graf no dirigit Graf dirigit Graf dirigit amb pesos
+Com representem aquests grafs ?G(V,E)
+=== PAGINA 61 ===
+Representació dels grafs
+•Com representem un graf? 
+•Linked list o array 
+•Matriu d’adjacència 
+•Llista d’adjacència
+61
+=== PAGINA 62 ===
+Representació dels grafs
+•Com representem un graf? 
+•Linked list o array 
+•Matriu d’adjacència 
+•Llista d’adjacència
+62
+=== PAGINA 63 ===
+Representació dels grafs
+En cas de graf no dirigit: 
+La mateixa dada
+63
+•Com representem un graf? 
+•Linked list o array 
+•Matriu d’adjacència 
+•Llista d’adjacència
+=== PAGINA 64 ===
+Representació dels grafs
+Que guardem per a les arestes? 
+•1/0 o True/false 
+•Pes/cost de l’aresta 
+•utilitzem valors ficticis a les posicions on no tenim aresta {-∞,0,∞} 
+•Objecte de l’aresta
+64
+1 2 3 4 5 6 7
+1 ∞
+ 1 ∞
+ ∞
+ ∞
+ ∞
+ ∞
+2 ∞
+ ∞
+ ∞
+ 3 ∞
+ 15 ∞
+3 23 3 ∞ 8 ∞
+ ∞
+ ∞
+4 ∞
+ ∞
+ 3 ∞
+ ∞
+ 5 12
+5 ∞
+ ∞
+ ∞
+ ∞
+ ∞
+ ∞
+ 55
+6 ∞
+ 1 4 4 ∞
+ ∞
+7 ∞
+ ∞
+ ∞
+ ∞
+ ∞
+ 6 ∞
+•Com representem un graf? 
+•Linked list o array 
+•Matriu d’adjacència 
+•Llista d’adjacència
+=== PAGINA 65 ===
+Representació dels grafs
+65
+•Com representem un graf? 
+•Linked list o array 
+•Matriu d’adjacència 
+•Llista d’adjacència
+=== PAGINA 66 ===
+Representació dels grafs
+66
+•Com representem un graf? 
+•Linked list o array 
+•Matriu d’adjacència 
+•Llista d’adjacència
+
+=== PAGINA 67 ===
+Algoritmes sobre grafs
+•Matriu ó llista d’adjacència?
+•Matriu  |V|2 posicions  un accés
+•Llista  |E| posicions  mínim un accés memòria versus localització
+•Graf dens versus graf sparse
+Què faríeu servir per codiﬁcar tots els 
+enllaços de les pàgines del www?
+=== PAGINA 68 ===
+Representació dels grafs
+•A la pràctica: Quin utilitzar? 
+•Els grafs reals acostumen a ser dispersos (sparse)
+Alt nombre de nodes, grau 
+mitja del nodes petit
+68
+=== PAGINA 69 ===
+Representació dels grafs
+•A la pràctica: Quin utilitzar? 
+•Els algoritmes es basen en iterar sobre els nodes adjacents del vèrtex 
+•Els grafs reals acostumen a ser sparse
+Alt nombre de nodes, grau 
+mitja del nodes petit
+69
+=== PAGINA 70 ===
+Representació dels grafs
+•A la pràctica: Quin utilitzar? 
+•Els algoritmes es basen en iterar sobre els nodes adjacents del vèrtex 
+•Els grafs reals acostumen a ser sparse
+Alt nombre de nodes, grau 
+mitja del nodes petit
+70
+=== PAGINA 71 ===
+Recap: Recorregut 
+Arbres
+=== PAGINA 72 ===
+Recap: Recorregut
+Text del títol
+A
+B C
+D E F
+G H
+
+=== PAGINA 73 ===
+Recap: Recorregut
+Text del títol
+ A
+B C
+D E F
+G H

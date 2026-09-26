@@ -1,0 +1,297 @@
+{
+  "output": "C:\\Users\\Carlos\\Desktop\\AA\\output\\pdf\\AA01_Explicacion_teoria_y_guia_de_examen.pdf",
+  "paginas": 24,
+  "paginas_planeadas": 24,
+  "titulos": [
+    "Teoría 1 de Algorísmica Avanzada",
+    "1 Qué mide la complejidad",
+    "2 Notación O Omega y Theta",
+    "3 Comparar órdenes de crecimiento",
+    "4 Resolver el código de la clase",
+    "5 Método para analizar bucles",
+    "6 Bucles cuyos límites cambian",
+    "7 Operaciones de Python que ocultan trabajo",
+    "8 Recursión y memoria",
+    "9 Qué es un grafo",
+    "10 Grafos simples y grados",
+    "11 Caminos y preguntas sobre grafos",
+    "12 Lista de aristas y matriz de adyacencia",
+    "13 Listas de adyacencia y pesos",
+    "14 Elegir una representación",
+    "15 El DFS recursivo de la clase",
+    "16 BFS y distancias por niveles",
+    "17 Complejidad de los recorridos",
+    "18 Ejercicios de complejidad",
+    "19 Soluciones de complejidad",
+    "20 Ejercicios de grafos",
+    "21 Soluciones de grafos",
+    "22 Estrategias que se presentan en la clase",
+    "23 Repaso para el examen y referencias"
+  ],
+  "mapeo": [
+    {
+      "pagina": 1,
+      "primeras_lineas": [
+        "Algorísmica Avanzada  ·  AA01",
+        "1",
+        "Teoría 1 de Algorísmica Avanzada",
+        "Complejidad y fundamentos de grafos",
+        "Esta guía explica los conceptos de la primera clase y cómo aplicarlos a preguntas de teoría y análisis"
+      ],
+      "caracteres": 1865
+    },
+    {
+      "pagina": 2,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "2",
+        "1 Qué mide la complejidad",
+        "La complejidad temporal describe cómo aumenta el trabajo de un algoritmo cuando crece la entrada."
+      ],
+      "caracteres": 2547
+    },
+    {
+      "pagina": 3,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "3",
+        "2 Notación O Omega y Theta",
+        "La notación asintótica compara funciones cuando el tamaño de la entrada se hace suficientemente"
+      ],
+      "caracteres": 2276
+    },
+    {
+      "pagina": 4,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "4",
+        "3 Comparar órdenes de crecimiento",
+        "Para tamaños grandes, el orden habitual de las funciones de esta tabla es creciente. «Mejor» significa"
+      ],
+      "caracteres": 2281
+    },
+    {
+      "pagina": 5,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "5",
+        "4 Resolver el código de la clase",
+        "Las páginas 6, 9 y 10 muestran el siguiente ejemplo. Para evitar confundir la lista con su longitud,"
+      ],
+      "caracteres": 2144
+    },
+    {
+      "pagina": 6,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "6",
+        "5 Método para analizar bucles",
+        "El objetivo es convertir el código en un recuento de trabajo. Este procedimiento también ayuda a"
+      ],
+      "caracteres": 1955
+    },
+    {
+      "pagina": 7,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "7",
+        "6 Bucles cuyos límites cambian",
+        "Cuando el coste del bucle interior depende del índice exterior, escribe el número total de iteraciones"
+      ],
+      "caracteres": 1907
+    },
+    {
+      "pagina": 8,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "8",
+        "7 Operaciones de Python que ocultan trabajo",
+        "La sintaxis breve no garantiza coste constante. Esta tabla se refiere a listas de Python y a conjuntos o"
+      ],
+      "caracteres": 2109
+    },
+    {
+      "pagina": 9,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "9",
+        "8 Recursión y memoria",
+        "Una función recursiva no es exponencial solo por llamarse a sí misma. Debes contar las llamadas, el"
+      ],
+      "caracteres": 2141
+    },
+    {
+      "pagina": 10,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "10",
+        "9 Qué es un grafo",
+        "Un grafo es una estructura que representa entidades y relaciones. Se escribe G = (V, E), donde V es"
+      ],
+      "caracteres": 1877
+    },
+    {
+      "pagina": 11,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "11",
+        "10 Grafos simples y grados",
+        "Un bucle es una arista que conecta un vértice consigo mismo. Hay aristas paralelas cuando existen"
+      ],
+      "caracteres": 2015
+    },
+    {
+      "pagina": 12,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "12",
+        "11 Caminos y preguntas sobre grafos",
+        "Una secuencia de vértices enlazados por aristas describe un recorrido. En un grafo dirigido debe"
+      ],
+      "caracteres": 2835
+    },
+    {
+      "pagina": 13,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "13",
+        "12 Lista de aristas y matriz de adyacencia",
+        "La representación determina qué operaciones son rápidas y cuánto espacio necesitas. AA01 presenta"
+      ],
+      "caracteres": 1914
+    },
+    {
+      "pagina": 14,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "14",
+        "13 Listas de adyacencia y pesos",
+        "Una lista de adyacencia guarda, para cada vértice, los vecinos con los que tiene conexión. El conjunto"
+      ],
+      "caracteres": 2201
+    },
+    {
+      "pagina": 15,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "15",
+        "14 Elegir una representación",
+        "Esta comparación supone un grafo simple, ya construido, sin índices adicionales. d(u) es el grado; en"
+      ],
+      "caracteres": 2460
+    },
+    {
+      "pagina": 16,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "16",
+        "15 El DFS recursivo de la clase",
+        "Las páginas 72 y 73 representan un árbol con raíz A y el siguiente diccionario. Cada lista conserva un"
+      ],
+      "caracteres": 1984
+    },
+    {
+      "pagina": 17,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "17",
+        "16 BFS y distancias por niveles",
+        "BFS, breadth first search, explora primero los vértices a una arista del origen, después los que están a"
+      ],
+      "caracteres": 2425
+    },
+    {
+      "pagina": 18,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "18",
+        "17 Complejidad de los recorridos",
+        "El coste de DFS y BFS se entiende contando expansiones de vértices y revisiones de aristas. La"
+      ],
+      "caracteres": 2527
+    },
+    {
+      "pagina": 19,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "19",
+        "18 Ejercicios de complejidad",
+        "Para cada fragmento indica el tiempo, el caso analizado y el espacio auxiliar. Supón n = len(a),"
+      ],
+      "caracteres": 1250
+    },
+    {
+      "pagina": 20,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "20",
+        "19 Soluciones de complejidad",
+        "Ejercicio 1"
+      ],
+      "caracteres": 2258
+    },
+    {
+      "pagina": 21,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "21",
+        "20 Ejercicios de grafos",
+        "Usa un grafo simple no dirigido con V = {A, B, C, D, E, F} y E = {{A, B}, {A, C}, {B, D}, {C, D}, {D, E}}. F"
+      ],
+      "caracteres": 1914
+    },
+    {
+      "pagina": 22,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "22",
+        "21 Soluciones de grafos",
+        "Ejercicio 1"
+      ],
+      "caracteres": 2221
+    },
+    {
+      "pagina": 23,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "23",
+        "22 Estrategias que se presentan en la clase",
+        "La página 46 ofrece una vista general de técnicas que se trabajarán después. Interesa comprender su"
+      ],
+      "caracteres": 2863
+    },
+    {
+      "pagina": 24,
+      "primeras_lineas": [
+        "Teoría 1  |  Complejidad y fundamentos de grafos",
+        "Algorísmica Avanzada  ·  AA01",
+        "24",
+        "23 Repaso para el examen y referencias",
+        "Análisis de código"
+      ],
+      "caracteres": 2805
+    }
+  ]
+}
