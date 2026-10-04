@@ -1,0 +1,369 @@
+{
+  "output": "C:\\Users\\Carlos\\Desktop\\AA\\output\\pdf\\AA02_Explicacion_teoria_y_guia_de_examen.pdf",
+  "paginas": 30,
+  "paginas_planeadas": 30,
+  "titulos": [
+    "Teoría de la semana 2",
+    "1 Recorridos caminos y ciclos",
+    "2 El DFS recursivo de AA02",
+    "3 Seguir la pila y construir el árbol DFS",
+    "4 DFS iterativo con una pila explícita",
+    "5 Por qué el código iterativo no es óptimo",
+    "6 Visitados como conjunto o como lista",
+    "7 Justificar la complejidad de un recorrido",
+    "8 BFS y el significado de descubrir",
+    "9 Resolver la cola del ejercicio de clase",
+    "10 Reconstruir un camino mínimo",
+    "11 Comparar DFS y BFS sobre el mismo grafo",
+    "12 Componentes conexas en grafos no dirigidos",
+    "13 Conectividad débil y fuerte",
+    "14 Flood Fill y conectividad en una imagen",
+    "15 Implementar Flood Fill sin repetir celdas",
+    "16 Por qué los pesos cambian el problema",
+    "17 La idea de Dijkstra y la relajación",
+    "18 Por qué Dijkstra necesita pesos no negativos",
+    "19 Cola de prioridad y min heap",
+    "20 El ejemplo de Dijkstra de la clase",
+    "21 Tabla completa y árbol de caminos mínimos",
+    "22 Dijkstra en Python con entradas antiguas",
+    "23 Complejidad de Dijkstra y errores de examen",
+    "24 Ejercicios para preparar el examen",
+    "25 Soluciones razonadas",
+    "26 Los dos ejercicios finales de Dijkstra",
+    "27 Soluciones de los ejercicios finales",
+    "28 Método de respuesta y repaso rápido",
+    "29 Aclaraciones de las diapositivas y lecturas"
+  ],
+  "mapeo": [
+    {
+      "pagina": 1,
+      "primeras_lineas": [
+        "Algorísmica Avanzada  ·  AA02",
+        "1",
+        "Teoría de la semana 2",
+        "Recorridos componentes conexas y caminos mínimos",
+        "Esta guía explica cómo explorar un grafo, identificar sus partes conectadas y encontrar caminos"
+      ],
+      "caracteres": 1860
+    },
+    {
+      "pagina": 2,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "2",
+        "1 Recorridos caminos y ciclos",
+        "Un recorrido desde x hasta y es una sucesión x = u0, u1, ..., uk = y en la que cada pareja consecutiva"
+      ],
+      "caracteres": 2018
+    },
+    {
+      "pagina": 3,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "3",
+        "2 El DFS recursivo de AA02",
+        "DFS, búsqueda en profundidad, explora una rama antes de volver a los vecinos pendientes. La"
+      ],
+      "caracteres": 1526
+    },
+    {
+      "pagina": 4,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "4",
+        "3 Seguir la pila y construir el árbol DFS",
+        "Usamos el mismo grafo y el mismo orden de listas de la página anterior. La pila que se muestra es la"
+      ],
+      "caracteres": 1741
+    },
+    {
+      "pagina": 5,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "5",
+        "4 DFS iterativo con una pila explícita",
+        "La pila de llamadas puede sustituirse por una estructura LIFO: el último elemento añadido es el"
+      ],
+      "caracteres": 2223
+    },
+    {
+      "pagina": 6,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "6",
+        "5 Por qué el código iterativo no es óptimo",
+        "La página 11 pide analizar una implementación que usa una lista para visitados. Sus fragmentos"
+      ],
+      "caracteres": 2289
+    },
+    {
+      "pagina": 7,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "7",
+        "6 Visitados como conjunto o como lista",
+        "Las páginas 13 a 19 comparan variantes de DFS y muestran respuestas contradictorias. La manera"
+      ],
+      "caracteres": 2190
+    },
+    {
+      "pagina": 8,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "8",
+        "7 Justificar la complejidad de un recorrido",
+        "Con listas de adyacencia y comprobaciones constantes de visitados, se cuenta una expansión por"
+      ],
+      "caracteres": 2235
+    },
+    {
+      "pagina": 9,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "9",
+        "8 BFS y el significado de descubrir",
+        "BFS, búsqueda en anchura, utiliza una cola FIFO. Explora primero todos los vértices a distancia 1,"
+      ],
+      "caracteres": 2127
+    },
+    {
+      "pagina": 10,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "10",
+        "9 Resolver la cola del ejercicio de clase",
+        "La página 43 contiene este grafo no dirigido. F y G forman una componente separada. Tomamos"
+      ],
+      "caracteres": 1626
+    },
+    {
+      "pagina": 11,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "11",
+        "10 Reconstruir un camino mínimo",
+        "Las distancias indican el coste mínimo, pero no contienen por sí solas la secuencia de vértices. El"
+      ],
+      "caracteres": 2340
+    },
+    {
+      "pagina": 12,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "12",
+        "11 Comparar DFS y BFS sobre el mismo grafo",
+        "Desde S en el ejercicio de la página 43, con vecinos en orden alfabético, DFS recursivo descubre S, A,"
+      ],
+      "caracteres": 1411
+    },
+    {
+      "pagina": 13,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "13",
+        "12 Componentes conexas en grafos no dirigidos",
+        "Un grafo no dirigido es conexo si cualquier pareja de vértices está unida por un camino. Una"
+      ],
+      "caracteres": 1793
+    },
+    {
+      "pagina": 14,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "14",
+        "13 Conectividad débil y fuerte",
+        "En un grafo dirigido, llegar de u a w no implica poder volver de w a u. Por eso no se puede trasladar"
+      ],
+      "caracteres": 2121
+    },
+    {
+      "pagina": 15,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "15",
+        "14 Flood Fill y conectividad en una imagen",
+        "Una imagen o tablero puede verse como un grafo implícito: cada celda válida es un vértice y los"
+      ],
+      "caracteres": 2309
+    },
+    {
+      "pagina": 16,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "16",
+        "15 Implementar Flood Fill sin repetir celdas",
+        "Esta versión usa cuatro vecinos y modifica la imagen. El nuevo color sirve de marca, de modo que no"
+      ],
+      "caracteres": 2239
+    },
+    {
+      "pagina": 17,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "17",
+        "16 Por qué los pesos cambian el problema",
+        "El camino más corto puede significar menos aristas o menor suma de pesos. Cuando cada arista"
+      ],
+      "caracteres": 2115
+    },
+    {
+      "pagina": 18,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "18",
+        "17 La idea de Dijkstra y la relajación",
+        "Dijkstra calcula las distancias mínimas desde un origen s en un grafo dirigido o no dirigido cuyos pesos"
+      ],
+      "caracteres": 2183
+    },
+    {
+      "pagina": 19,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "19",
+        "18 Por qué Dijkstra necesita pesos no negativos",
+        "El invariante esencial es que los vértices ya fijados tienen su distancia mínima real desde el origen."
+      ],
+      "caracteres": 2134
+    },
+    {
+      "pagina": 20,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "20",
+        "19 Cola de prioridad y min heap",
+        "Una cola de prioridad extrae el elemento con menor clave. Para Dijkstra, la clave es la distancia"
+      ],
+      "caracteres": 2078
+    },
+    {
+      "pagina": 21,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "21",
+        "20 El ejemplo de Dijkstra de la clase",
+        "Las páginas 64 y 71 a 79 trabajan este grafo no dirigido. Usaremos el nombre z para el destino de la"
+      ],
+      "caracteres": 1824
+    },
+    {
+      "pagina": 22,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "22",
+        "21 Tabla completa y árbol de caminos mínimos",
+        "Esta tabla recoge las distancias después de procesar cada vértice del ejemplo anterior. «Fijado» indica"
+      ],
+      "caracteres": 1647
+    },
+    {
+      "pagina": 23,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "23",
+        "22 Dijkstra en Python con entradas antiguas",
+        "Esta versión usa listas de pares (vecino, peso) y presupone pesos no negativos. Todos los destinos"
+      ],
+      "caracteres": 2190
+    },
+    {
+      "pagina": 24,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "24",
+        "23 Complejidad de Dijkstra y errores de examen",
+        "La complejidad depende de la cola de prioridad y de la representación. No basta con decir «Dijkstra"
+      ],
+      "caracteres": 2249
+    },
+    {
+      "pagina": 25,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "25",
+        "24 Ejercicios para preparar el examen",
+        "Responde primero sin consultar la página siguiente. Define el tamaño, el orden de vecinos y las"
+      ],
+      "caracteres": 2161
+    },
+    {
+      "pagina": 26,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "26",
+        "25 Soluciones razonadas",
+        "Ejercicio 1"
+      ],
+      "caracteres": 2339
+    },
+    {
+      "pagina": 27,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "27",
+        "26 Los dos ejercicios finales de Dijkstra",
+        "Los diagramas reconstruyen las páginas 83 y 84 de AA02. Practica las distancias y los predecesores"
+      ],
+      "caracteres": 1158
+    },
+    {
+      "pagina": 28,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "28",
+        "27 Soluciones de los ejercicios finales",
+        "Página 83 desde el vértice 3"
+      ],
+      "caracteres": 1882
+    },
+    {
+      "pagina": 29,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "29",
+        "28 Método de respuesta y repaso rápido",
+        "Si te dan un dibujo"
+      ],
+      "caracteres": 2426
+    },
+    {
+      "pagina": 30,
+      "primeras_lineas": [
+        "Teoría 2  |  Recorridos componentes y caminos mínimos",
+        "Algorísmica Avanzada  ·  AA02",
+        "30",
+        "29 Aclaraciones de las diapositivas y lecturas",
+        "Puntos que conviene interpretar con precisión"
+      ],
+      "caracteres": 2461
+    }
+  ]
+}

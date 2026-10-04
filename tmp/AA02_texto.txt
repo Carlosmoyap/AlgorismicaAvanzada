@@ -1,0 +1,688 @@
+=== PAGINA 1 ===
+Santi Seguí | 2026-2027
+Grafs II Algorísmica Avançada | Enginyeria Informàtica 
+
+=== PAGINA 2 ===
+Recorreguts
+=== PAGINA 3 ===
+Recorreguts
+•Un recorregut entre dos vèrtex  i  és una successió de vèrtexs  
+que compleix: 
+•  
+•{ } és una aresta del graf G per a tot i entre 1 i k. 
+•La longitud del recorregut és k 
+•Un camí és un recorregut sense vèrtexs repetits.  
+•Un cicle és un camí tancat, és a dir, el primer vèrtex i l’últim 
+coincideixen.
+xy vo,v1,…,vk
+vo=x;vk=y
+vi−1,vi
+
+=== PAGINA 4 ===
+Recorreguts
+•Algunes preguntes:  
+•Quins vèrtexs són accessibles des d’un node X? 
+•Existeix un camí des del node A al node J? 
+•Quin és el camí més curt des del node A al node J?
+Ho podem veure com un laberint
+Components connexes
+=== PAGINA 5 ===
+Recorreguts amb grafs
+•Recorregut per profunditat - Depth First Search (DFS) 
+•Recorregut per amplada - Breath First Search (BFS)
+=== PAGINA 6 ===
+Algorismes sobre grafs
+•Quins vèrtexs són accessibles des del node v?
+1
+=== PAGINA 7 ===
+-Recorregut amb profunditat- 
+-depth-first search- 
+DFS
+=== PAGINA 8 ===
+Recorregut amb profunditat (DFS)
+•El recorregut amb profunditat en grafs és similar al recorregut amb profunditat amb arbres. 
+L’única diferència aquí, és que els grafs poden tenir cicles.
+
+=== PAGINA 9 ===
+Exploració dels grafs (DFS)
+•Exemple
+
+=== PAGINA 10 ===
+DFS - Implementació Recursiva
+
+=== PAGINA 11 ===
+DFS - Implementació Iterativa
+* Atenció: aquest codi no és òptim. Per què? quina complexitat té?
+=== PAGINA 12 ===
+DFS - Implementació Recursiva
+Quina és la 
+complexitat?
+=== PAGINA 13 ===
+Can you show the 
+recursive 
+implementation of 
+dfs with python?
+
+=== PAGINA 14 ===
+Can you explain the 
+time complexity of 
+this code?
+
+=== PAGINA 15 ===
+What would be the 
+time complexity if 
+the variable visited 
+was a list instead of 
+a set?
+
+=== PAGINA 16 ===
+Are you sure? 
+I though it was 
+O(V^2 + E)
+
+=== PAGINA 17 ===
+Sometimes the 
+check of visited is 
+inside the for loop. 
+Can you show this 
+code?  
+is it the same?
+
+=== PAGINA 18 ===
+What would be the 
+time complexity of 
+the previous code if 
+a list is used 
+instead of a set?
+
+=== PAGINA 19 ===
+Are you sure? 
+I though it was 
+O(V+VE) instead.
+
+=== PAGINA 20 ===
+DFS complexitat
+•Linked list o array =  Θ(|E|*|V|) 
+•Matriu d’adjacència =  Θ(|V|2) 
+•Llista d’adjacència =  Θ(|V|+|E|)  Θ(2|E|)  Θ(|E|)
+=== PAGINA 21 ===
+Exploració dels grafs (DFS)
+•Complexitat de DFS? 
+•TEOREMA EULER 1736:  la suma del graus de tots els nodes és igual a 2 cops el nombre 
+d’arestes del graf.
+  
+ Θ(|V|+|E|)  Θ(2|E|)  Θ(|E|) 
+=== PAGINA 22 ===
+Algorismes sobre grafs
+Exemple:
+
+=== PAGINA 23 ===
+Algorismes sobre grafs
+Exemple:
+Hem fet la següent exploració:
+A - E - I - M - N - K - O - P  
+L -H -D -C - B - F
+És possible?
+com continuarà?
+=== PAGINA 24 ===
+Algorismes sobre grafs
+Exemple:
+
+=== PAGINA 25 ===
+breath-first search  
+-Recorregut amb amplada- 
+BFS
+=== PAGINA 26 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+Output: 
+=== PAGINA 27 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+Start from here
+Output: 1
+=== PAGINA 28 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+Output: 1 - 2 - 6 - 8
+=== PAGINA 29 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+Output: 1 - 2 - 6 - 8 - 3
+=== PAGINA 30 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+Output: 1 - 2 - 6 - 8 - 3 - 7 
+=== PAGINA 31 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+Output: 1 - 2 - 6 - 8 - 3 - 7 - 4 - 9 
+=== PAGINA 32 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+Output: 1 - 2 - 6 - 8 - 3 - 7 - 4 - 9 - 5
+=== PAGINA 33 ===
+1
+2
+8
+6
+3
+9
+7
+5
+4
+=== PAGINA 34 ===
+Com podem implementar-
+ho? 
+Alguna idea?
+=== PAGINA 35 ===
+Recorregut amb profunditat (BFS)
+•BFS té un codi similar al DFS, però fa ús d’una cua en lloc d’una pila.
+•Els arbres generats per BFS es diuen arbres de camí mínim.
+•Si ens trobem en un graf sense pesos, amb el recorregut BFS podem trobar el camí mínim 
+d’un vèrtex a la resta de vèrtexs del graf!
+GRAF DFS BFS
+=== PAGINA 36 ===
+Algorismes sobre grafs
+•Exemple
+
+=== PAGINA 37 ===
+Algorismes sobre grafs
+•Exemple
+=== PAGINA 38 ===
+Algorismes sobre grafs
+•Exemple
+=== PAGINA 39 ===
+Algorismes sobre grafs
+•Exemple
+=== PAGINA 40 ===
+Algorismes sobre grafs
+•Exemple
+=== PAGINA 41 ===
+Aplicacions
+•El menor nombre de salts en una xarxa de comunicació.
+=== PAGINA 42 ===
+Aplicacions dels recorreguts
+•Ruta més curta en grafs no ponderats 
+•Descobriu tots els nodes accessibles des d'un vèrtex inicial 
+•Trobar els nodes veïns a xarxes peer-to-peer com BitTorrent. 
+•Els rastrejadors utilitzats pels motors de cerca per visitar enllaços d’una pàgina web i seguir fent el mateix de 
+manera recursiva. 
+•Trobar les persones a una distància determinada a les xarxes socials. 
+•Identiﬁcar totes les ubicacions veïnes dels sistemes GPS. 
+•Cercar si existeix un camí entre dos nodes d’un graf. 
+•Permetre que els paquets emesos arribin a tots els nodes d'una xarxa.
+=== PAGINA 43 ===
+Exercicis
+1.Dibuixa els arbres DFS obtinguts començant a cada node del següent graf.
+2.Dibuixa l’arbre BFS del mateix graf que obteniu si comenceu pel node S. Indiqueu el 
+contingut de la cua a cada iteració del mètode. 
+
+=== PAGINA 44 ===
+Exercici
+•Identiﬁca el camí més curt entre dos nodes. Escriu el pseudocodi.
+=== PAGINA 45 ===
+Components 
+Connexes
+=== PAGINA 46 ===
+Components Connexes
+•Diem que un graf no dirigit  és connex si, per a qualsevol parell de vèrtexs , 
+existeix un camí que connecta  amb . Això signiﬁca que no hi ha vèrtexs aïllats ni subgrups separats 
+dins del Graf. 
+•Una component connexa és un subgraf maximal connex. “Maximal” vol dir que no es pot afegir cap 
+altre vèrtex del graf a aquest subgraf, en cas contrari deixaria de ser connex. Cada component és, 
+doncs, una part del graf que està completament interconnectada per camins, i no hi ha connexions 
+amb vèrtexs fora de la component.
+G=(V,E) u,v∈V
+u v
+Exemple: Graf no dirigit no connex, 12 vèrtexs,13 arestes i dues components connexes
+=== PAGINA 47 ===
+•DFS també ens soluciona un altre problema de grafs: els components connexos
+Cada crida a explore crea un nou 
+arbre i es troba una nova 
+component connexa
+Components Connexes
+=== PAGINA 48 ===
+Graf fortament connex
+•Un graf dirigit es diu fortament connex si, per a qualsevol parell de vèrtexs , existeix un 
+camí dirigit de  a  i un de  a .  
+•Una component fortament connexa és un subgraf maximal fortament connex, és a dir, 
+un subgraf fortament connex al qual no se li pot afegir cap vèrtex més del graf sense deixar 
+de ser fortament connex.
+u,v
+uv vu
+
+=== PAGINA 49 ===
+Graf feblement connex
+•Un graf dirigit es diu feblement connex quan és connex com a graf no dirigit. És a dir, quan 
+en substituir totes les seves arestes (dirigides) per arestes no dirigides obtenim un graf no 
+dirigit connex.
+=== PAGINA 50 ===
+Components Connexes
+•Quins vèrtexs són accessibles des de quins? 
+•Grafs dirigits 
+
+=== PAGINA 51 ===
+Algunes Aplicacions
+=== PAGINA 52 ===
+Algoritme Flood-Fill
+=== PAGINA 53 ===
+Flood Fill
+•L’algorisme Flood Fill ens permet 
+determinar l’àrea connectada a un node 
+donada una matriu multidimensional. Una 
+imatge de  píxels es pot representar 
+com un graf de  nodes, on cada pixel 
+és un node del graf. Dos nodes estan 
+connectats per una aresta si són adjacents. 
+Podem tindre connectivitat a 4 (horitzontal i 
+vertical) o connectivitat a 8 (horitzontal, 
+vertical i diagonals).
+m×n
+m×n
+
+=== PAGINA 54 ===
+Aplicacions
+
+=== PAGINA 55 ===
+Shortest Path 
+Camí més curt entre dos 
+nodes
+=== PAGINA 56 ===
+Algorismes sobre grafs
+•Fins ara hem parlat de connectivitat, però no hem analitzat el cost del camí que hem trobat 
+entre els punts connectats.  
+•DFS assegura el camí més curt entre 2 punts connectats en un graf no dirigit???
+Podem definir el camí més curt entre 2 vèrtexs com el número d’arestes fins 
+arribar, o el número de vèrtexs que travessem, o la suma dels pesos de les 
+arestes, dels vèrtexs, etc. 
+=== PAGINA 57 ===
+Shortest Path
+•De moment suposem que tots els pesos són positius >= 0
+•BFS troba camins mínims on les arestes tenen un cost unitari.
+•Com ho fem general per a qualsevol graf G=(V,E) amb arestes amb costos positius? 
+•Algorisme de Dijkstra
+=== PAGINA 58 ===
+Shortest Path
+•Pensem primer una versió per fer ús de BFS
+
+=== PAGINA 59 ===
+Shortest Path
+•En cas que les arestes tinguin pesos. Com ho podem fer? 
+•Pensem primer utilitzant el BFS
+•Dividir les longituds en valors unaris incloent vèrtexs extra 
+
+=== PAGINA 60 ===
+Shortest Path
+•En cas que les arestes tinguin pesos. Com ho podem fer? 
+•Pensem primer utilitzant el BFS
+•Dividir les longituds en valors unaris incloent vèrtexs extra 
+
+=== PAGINA 61 ===
+Shortest Path
+•Un problema evident.
+•Pensem millor en posar una “alarma” a cada node i l’actualitzem a mida que arribem fent ús 
+de DFS. Els valors de les alarmes podrien ser els costos de les arestes!!!
+
+=== PAGINA 62 ===
+Dijkstra
+=== PAGINA 63 ===
+Algoritme Dijkstra
+•L’algoritme Dijkstra ens permet determinar el camí més curt donat un vèrtex 
+origen a la resta de vèrtexs en un graf amb pesos positius a les arestes. 
+•El seu nom li ve d' Edsger Dijkstra, qui el va descriure per primera vegada el 
+1959. 
+•La idea subjacent en aquest algorisme consisteix a anar explorant tots els 
+camins més curts que parteixen del vèrtex origen i que porten a tots els 
+altres vèrtexs, quan s'obté el camí més curt des del vèrtex origen, a la resta 
+de vèrtexs que formen el graf, l'algorisme s’atura. 
+•L’algorisme no funciona si tenim costos negatius a les arestes. 
+•En funció de com implementem el mètode i les estructures de dades 
+utilitzades, la complexitat en temps és O(E⋅log(V))
+
+=== PAGINA 64 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+z
+4
+5
+6
+5
+28
+10
+1
+2
+=== PAGINA 65 ===
+Algorismes sobre grafs
+•Pensem millor en posar una “alarma” a cada node i l’actualitzem a mida que arribem fent ús 
+de DFS. Els valors de les alarmes podrien ser els costos de les arestes!!!
+Ara ens queda implementar el sistema d’alarmes
+Definim una alarma per al node s al temps 0 
+Repetim mentre existeixin alarmes pendents 
+Diguem que la següent alarma es dispara al temps T, per al node u desde s: 
+Fixem la distancia del node s a u a cost T 
+Per a cada veí v del node u del graf G: 
+* Si no tenim una alarma fixada pel node v, fixem una nova alarma pel node v al temps 
+T+ l(u,v) 
+* Si l’alarma del node v està programada per disparar-se més tard que T+ l(u,v), la 
+reiniciem perquè es dispari al temps T+l(u,v)
+=== PAGINA 66 ===
+Dijkstra
+•Algorisme de Dijkstra 
+•Cua amb prioritats -> generalment utilitzant Heap 
+•Manté un conjunt d’elements (nodes) amb les valors numèrics associats com a claus (temps 
+de l’alarma) i suporta les següents operacions:
+Inserció: inclou un nou element al conjunt. 
+Decrementar-clau: Disminuir el valor de la clau d’un element particular. La cua amb 
+prioritats normalment no canvia el valor de les claus, el que fa és notificar a la 
+cua que el valor d’una certa clau ha estat disminuït. 
+Eliminar-min: Retorna l’element amb la menor clau i l’elimina del conjunt. 
+Fer-cua: Construeix una cua amb prioritats amb els elements donats i els seus 
+valors de clau associats. 
+=== PAGINA 67 ===
+
+=== PAGINA 68 ===
+Dijkstra
+•Inserir i disminuir clau ens permet fixar les alarmes, mentre que eliminar-min ens diu quina és 
+la pròxima alarma a tenir en compte.
+Inserció: inclou un nou element al conjunt. 
+Disminuir-clau: Disminuir el valor de la clau d’un element particular. La cua amb 
+prioritats normalment no canvia el valor de les claus, el que fa és notificar a la 
+cua que el valor d’una certa clau ha estat disminuït. 
+Eliminar-min: Retorna l’element amb la menor clau i l’elimina del conjunt. 
+Fer-cua: Construeix una cua amb prioritats amb els elements donats i els seus valors 
+de clau associats. 
+=== PAGINA 69 ===
+Dijkstra
+
+=== PAGINA 70 ===
+Dijkstra
+•dist(u) es refereix als valors actuals d’alarma del node u. Un valor inﬁnit signiﬁca que encara 
+no hem posat valor a l’alarma. 
+•L’array prev: guarda informació del node immediat abans del node actual u dins la ruta més 
+curta entre s i u.
+•Si retornem fent ús dels valor d’aquests punters podem reconstruir els camins més curts de 
+forma senzilla. 
+•Podem veure que la diferència principal entre l’algorisme Dijkstra I BFS és que el primer usa 
+una cua amb prioritats en lloc d’una cua regular, de forma que prioritza nodes en funció dels 
+costos de les arestes.
+=== PAGINA 71 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+z
+4
+5
+6
+5
+28
+10
+1
+2
+=== PAGINA 72 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+4
+5
+6
+5
+28
+10
+1
+2
+Node Estat Camí més curt des d’A Node previ
+a Node actual 0
+b ∞
+c ∞
+d ∞
+e ∞
+f ∞
+=== PAGINA 73 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+5
+6
+5
+28
+10
+1
+Node Estat Camí més curt des d’A Node previ
+a Node actual 0
+b ∞   4 A
+c ∞   2 A
+d ∞
+e ∞
+f ∞
+4
+2
+veïns de A 
+no visitats
+=== PAGINA 74 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+5
+6
+5
+28
+10
+1
+Node Estat Camí més curt des d’A Node previ
+a visitat 0
+b 4 A
+c Node actual 2 A
+d ∞
+e ∞
+f ∞
+4
+2
+veïns de A 
+no visitats
+=== PAGINA 75 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+5
+6
+5
+28
+10
+1
+Node Estat Camí més curt des d’A Node previ
+a visitat 0
+b 4 2+1 = 3 A C
+c Node actual 2 A
+d ∞ 2+8 = 10 C
+e ∞ 2+10 = 12 C
+f ∞
+4
+2
+veïns de C 
+no visitats
+=== PAGINA 76 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+5
+6
+5
+28
+10
+1
+Node Estat Camí més curt des d’A Node previ
+a visitat 0
+b Node actual3 C
+c visitat 2 A
+d 10 3+5 = 8 C B
+e 12 C
+f ∞
+4
+2
+veïns de B 
+no visitats
+=== PAGINA 77 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+5
+6
+5
+28
+10
+1
+Node Estat Camí més curt des d’A Node previ
+a visitat 0
+b visitat 3 C
+c visitat 2 A
+d Node actual8 B
+e 12 8+2 = 10 C D
+f ∞ 8+6 = 14 D
+4
+2
+veïns de D 
+no visitats
+=== PAGINA 78 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+5
+6
+5
+28
+10
+1
+Node Estat Camí més curt des d’A Node previ
+a visitat 0
+b visitat 3 C
+c visitat 2 A
+d visitat 8 B
+e Node actual10 D
+f 14 D
+4
+2
+veïns de E 
+no visitats
+=== PAGINA 79 ===
+Algorismes sobre grafs
+a
+b
+c
+d
+e
+f
+4
+5
+6
+5
+28
+10
+1
+2
+Node Estat Camí més curt des d’A Node previ
+a visitat 0
+b visitat 3 C
+c visitat 2 A
+d visitat 8 B
+e Node actual10 D
+f 14 D
+=== PAGINA 80 ===
+Dijkstra
+•Algorisme de Dijkstra: exemple graf dirigit
+=== PAGINA 81 ===
+Dijkstra
+•Algorisme de Dijkstra: exemple graf dirigit
+=== PAGINA 82 ===
+Dijkstra
+•Algorisme de Dijkstra: exemple graf dirigit
+=== PAGINA 83 ===
+Dijkstra
+•Exercici: busqueu la solució
+=== PAGINA 84 ===
+Dijkstra
+•Exercici: busqueu la solució
